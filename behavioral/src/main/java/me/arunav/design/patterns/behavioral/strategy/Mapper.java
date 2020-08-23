@@ -5,13 +5,15 @@ import me.arunav.design.patterns.behavioral.strategy.vo.SomeDomainDO;
 
 public class Mapper {
 
-    public void mapCodeValues(AppDTO appDTO) {
+    private CodeValue codeValue;
 
-        CodeValue codeValue = CodeValueCache.getCodeValue(appDTO.getKey());
+    public void mapCodeValues(AppDTO appDTO) {
+        codeValue = CodeValueCache.getCodeValue(appDTO.getKey());
         StaticCodeValues staticCodeValues = codeValue.getStaticCodeValues();
         DynamicCodeValues dynamicCodeValues = codeValue.getDynamicCodeValues();
 
         SomeDomainDO someDomainDO = new SomeDomainDO();
+
         someDomainDO.setAttr1(staticCodeValues.getAttr1());
         someDomainDO.setAttr2List(staticCodeValues.getAttr2());
         someDomainDO.setAmount(dynamicCodeValues.getAmount().apply(appDTO));

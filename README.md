@@ -5,4 +5,4 @@
 ### Strategy Pattern 
 
 #### Example 
-<img src="./.images/strategy-example.png">
+<img src="./.images/strategy.png">
