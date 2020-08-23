@@ -9,7 +9,7 @@ import lombok.Getter;
 @Builder
 public class CodeValue {
 
-    private StaticCodeValues staticCodeValues;
-    private DynamicCodeValues dynamicCodeValues;
+    private final StaticCodeValues staticCodeValues;
+    private final DynamicCodeValues dynamicCodeValues;
 }
 

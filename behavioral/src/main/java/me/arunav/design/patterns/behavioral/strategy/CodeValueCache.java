@@ -5,12 +5,13 @@ import me.arunav.design.patterns.behavioral.strategy.mockedDB.StaticCodeValuesTa
 import java.util.HashMap;
 import java.util.Map;
 
-import static me.arunav.design.patterns.behavioral.strategy.DynamicCodeValueStrategies.*;
+import static me.arunav.design.patterns.behavioral.strategy.DynamicCodeValuesMappingStrategy.*;
 
 public class CodeValueCache {
 
     private static final Map<String, CodeValue> codeValueMap = new HashMap<>();
 
+    // Building the cache during application startup
     public static void buildCodeValues() {
 
         System.out.println("Building Cache...");
@@ -23,14 +24,14 @@ public class CodeValueCache {
 
         codeValueMap.put("key2", new CodeValue(getStaticCodeValueFromDB("key2"), DynamicCodeValues.builder()
                 .amount(INR_AMOUNT)
-                .status(MERGED_STATUS)
+                .status(DERIVED_STATUS)
                 .description(DESCRIPTION1)
-                .date(TIME)
+                .date(DATE)
                 .build()));
 
         codeValueMap.put("key3", new CodeValue(getStaticCodeValueFromDB("key3"), DynamicCodeValues.builder()
                 .amount(GBP_AMOUNT)
-                .status(MERGED_STATUS)
+                .status(DERIVED_STATUS)
                 .description(DESCRIPTION2)
                 .date(DATE)
                 .build()));
