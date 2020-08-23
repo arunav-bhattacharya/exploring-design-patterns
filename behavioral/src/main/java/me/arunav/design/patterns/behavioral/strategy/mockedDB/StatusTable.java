@@ -12,7 +12,7 @@ public class StatusTable {
     }
 
     public static void loadData() {
-        System.out.println("Loading XYZ Code Values...");
+        System.out.println("Loading Status...");
         statusValues.put(1, "PENDING");
         statusValues.put(2, "PROCESSING");
         statusValues.put(3, "PROCESSED");
