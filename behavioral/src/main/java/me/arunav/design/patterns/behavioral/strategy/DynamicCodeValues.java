@@ -10,8 +10,8 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 
 @AllArgsConstructor
-@Getter
 @Builder
+@Getter
 public class DynamicCodeValues {
 
     private Function<AppDTO, Double> amount;
@@ -19,4 +19,11 @@ public class DynamicCodeValues {
     private Function<Date, String> date;
     private Supplier<String> description;
 
+    public static <T> T fetch(Supplier<T> supplier) {
+        return supplier.get();
+    }
+
+    public static <T, R> R transform(Function<T, R> function, T param) {
+        return function.apply(param);
+    }
 }
