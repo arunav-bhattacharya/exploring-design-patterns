@@ -26,4 +26,8 @@ public class DynamicCodeValues {
     public static <T, R> R transform(Function<T, R> function, T param) {
         return function.apply(param);
     }
+
+    public static <T, R> R transform2(Supplier<Function<T, R>> function, T param) {
+        return function.get().apply(param);
+    }
 }

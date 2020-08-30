@@ -3,8 +3,7 @@ package me.arunav.design.patterns.behavioral.strategy;
 import me.arunav.design.patterns.behavioral.strategy.vo.AppDTO;
 import me.arunav.design.patterns.behavioral.strategy.vo.SomeDomainDO;
 
-import static me.arunav.design.patterns.behavioral.strategy.DynamicCodeValues.fetch;
-import static me.arunav.design.patterns.behavioral.strategy.DynamicCodeValues.transform;
+import static me.arunav.design.patterns.behavioral.strategy.DynamicCodeValues.*;
 
 public class Mapper {
 
@@ -20,7 +19,7 @@ public class Mapper {
         SomeDomainDO someDomainDO = new SomeDomainDO();
         someDomainDO.setAttr1(staticCodeValues.getAttr1());
         someDomainDO.setAttr2List(staticCodeValues.getAttr2());
-        someDomainDO.setAmount(transform(dynamicCodeValues.getAmount(), appDTO));
+        someDomainDO.setAmount(transform2(dynamicCodeValues::getAmount, appDTO));
         someDomainDO.setStatus(transform(dynamicCodeValues.getStatus(), appDTO));
         someDomainDO.setTimeStamp(transform(dynamicCodeValues.getDate(), appDTO.getDate()));
         someDomainDO.setDescription(fetch(dynamicCodeValues.getDescription()));
