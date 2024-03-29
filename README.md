@@ -1,4 +1,4 @@
-# Design Patterns
+# Design Principles & Patterns
 
 Before exploring the different design patterns we'll focus on some key design principles that we'll try to use will learning these patterns.
 
@@ -18,21 +18,19 @@ Before exploring the different design patterns we'll focus on some key design pr
 > We'll be exploring the different GoF patterns.
 > Work in progress..
 
-## Quick Look
-- Java 8
-- Lombok
 
+## Design Patterns
 
-## Creational
+### Creational
 Creational patterns provide various object creation mechanisms, which increase flexibility and reuse of existing code.
 
-## Structural
+### Structural
 Structural patterns are concerned with how classes and objects are composed to form larger structures, while keeping this structures flexible and efficient.
 
-## Behavioral 
+### Behavioral 
 Behavioral patterns are concerned with algorithms and the assignment of responsibilities between objects.
 
-### Strategy Pattern 
+#### Strategy Pattern 
 
-#### Example 
+##### Example 
 <img src="./.images/strategy.png">
