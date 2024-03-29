@@ -4,33 +4,21 @@
 
 ## Design Principles
 
-Encapsulate what varies
-:    Identify the aspects of your application that vary and separate them from what stays the same.
+### Encapsulate what varies
+  Identify the aspects of your application that vary and separate them from what stays the same.
   
-- **Program to an interface, not an Implementation:**
-
-  Program to an interface, not an implementation. Depend on abstractions, not on concrete classes.
+### Program to an interface, not an Implementation
+Program to an interface, not an implementation. Depend on abstractions, not on concrete classes.
   
-- **Favor Composition Over Inheritance:**
+### Favor Composition Over Inheritance
+Classes should prefer code reuse and polymorphic behavior over inheriting from a parent or base class.
 
-  Classes should prefer code reuse and polymorphic behavior over inheriting from a parent or base class.
-
-- **SOLID Principles:**
-  - **Single Responsibility Principle:**
-
-    A class should have just one reason to change.
-  - **Open/Close Principle:**
-
-    Classes should be _Open_ to extension but _Closed_ for modification
-  - **Liskov Substitution Principle:**
-
-    When extending a class, you should be able to pass objects of the subclass in place of objects of the parent class without breaking the client code.
-  - **Interface Segregation Principle:**
-
-    Clients shouldn't be forced to depend on methods they do not use.
-  - **Dependency Inversion Principle:**
-  
-    High-level classes shouldn't depend on low level classes. Both should depend on abstractions. Abstractions shouldn't depend on details. Details should depend on abstractions.
+### SOLID Principles
+  - **Single Responsibility Principle:** A class should have just one reason to change.
+  - **Open/Close Principle:** Classes should be _Open_ to extension but _Closed_ for modification
+  - **Liskov Substitution Principle:** When extending a class, you should be able to pass objects of the subclass in place of objects of the parent class without breaking the client code.
+  - **Interface Segregation Principle:** Clients shouldn't be forced to depend on methods they do not use.
+  - **Dependency Inversion Principle:** High-level classes shouldn't depend on low level classes. Both should depend on abstractions. Abstractions shouldn't depend on details. Details should depend on abstractions.
 
 <br>
 
